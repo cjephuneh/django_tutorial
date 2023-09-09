@@ -7,14 +7,15 @@
 </head>
 <body>
     <h1>All books</h1>
+    {% for book in book_list %}
     <ul>
-        {% for book in books %}
-            <li>{{ book.title }}</li>
-            <li>{{ book.subtitle }}</li>
-            <li>{{ book.isbn }}</li>
-            <li>{{ book.author }}</li>
-            <li>{{ book.price }}</li>
-            <li>{{book.description}}</li>
-        {% endfor %}
+        <li>Title: {{ book.title }}</li>
+        <li>Subtitle: {{ book.subtitle }}</li>
+        <li>Author: {{ book.author }}</li>
+        <li>ISBN: {{ book.isbn }}</li>
+        <li>Price: {{ book.price }}</li>
+        <li>Description: {{ book.description }}</li>
+    </ul>
+    {% endfor %}
 </body>
 </html>
